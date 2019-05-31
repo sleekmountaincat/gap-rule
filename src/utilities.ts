@@ -43,7 +43,7 @@ export function toReservationSearch(search: any): ReservationSearch {
 // a reservation would not be accepted if it would create a gap that is 2 or less nights 
 // between the requested reservation and existing reservations.  
 //
-// we add one to the specified gap due to assuumption #4 (see README.md)
+// we add one to the specified gap due to assuumption #5 (see README.md)
 export function isCampsiteAvailable(siteReservations: CampsiteReservation[], gap: number, reservationSearch: ReservationSearch): boolean {
     const reservationFit: ReservationFit = getReservationFit(siteReservations, reservationSearch)
 
