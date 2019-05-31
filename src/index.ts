@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// takes an input file (see test-case.json) and determines what campsites 
+// can accomodate the requested reservation while satisifying the specified gap constraint
+
 import chalk from 'chalk';
 import figlet from 'figlet';
 import program from 'commander';
@@ -18,11 +21,11 @@ program
     .version('0.0.1')
     .description("Implements basic gap rule logic for campground reservations")
     .option('-i --input-file <file>', 'JSON input file', './test-case.json')
-    .option('-g --gap <n>', 'Gap amount', 1)
+    .option('-g --gap <n>', 'gap constraint - maximum number of nights not allowed between reservations', 1)
     .parse(process.argv);
 
 const inputFile: string = program.inputFile
-const gap: number = program.gap
+const gap: number = program.gap // the maximum number of nights not allowed between reservations
 
 if (!fs.existsSync(inputFile)) {
     console.log(`input file (${inputFile}) does not exist`)

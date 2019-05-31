@@ -1,6 +1,6 @@
 # gap-rule
 
-Implements basic gap rule logic for reservations.
+Implements basic gap rule logic for reservations. Takes an input file (see test-case.json for the format) and determines what campsites can accomodate the requested reservation while satisifying the specified gap constraint (maximum number of nights not allowed between reservations).
 
 # Overview
 A gap rule is a business rule to prevent gaps of a specified length between a requested reservation and existing reservations for a resource (campsite, hotel room, etc). This is to prevent holes in the reservation calendar  which are unlikely to be filled, as most guests will not want to stay for only one night. Some destinations may wish to exclude two or even three night gaps in the reservation calendar .
@@ -43,7 +43,7 @@ Implements basic gap rule logic for campground reservations
 Options:
   -V, --version           output the version number
   -i --input-file <file>  JSON input file (default: "./test-case.json")
-  -g --gap <n>            Gap amount (default: 1)
+  -g --gap <n>            gap constraint - maximum number of nights not allowed between reservations (default: 1)
   -h, --help              output usage information
 ```
 
