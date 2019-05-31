@@ -1,0 +1,36 @@
+{
+  "name": "gap-rule",
+  "version": "1.0.0",
+  "description": "Implements basic gap rule logic for campground reservations",
+  "main": "dist/index.js",
+  "bin": {
+    "gap-rule": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node -r esm dist",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test": "mocha --opts mocha.cfg",
+    "test:auto": "mocha --opts mocha.cfg --watch"
+  },
+  "author": "Chris Nelson",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "commander": "^2.20.0",
+    "esm": "^3.2.25",
+    "figlet": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/figlet": "^1.2.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.4.5"
+  }
+}
